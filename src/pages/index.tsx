@@ -4,17 +4,7 @@ import Link from "next/link";
 
 import { api } from "~/utils/api";
 
-import { OpenAI } from "langchain/llms/openai";
-import { CSVLoader } from "langchain/document_loaders/fs/csv";
 
-
-const run =  () => {
-  const loader = new CSVLoader("info.csv");
-
-  const docs = loader.load();
-
-  console.log(docs)
-}
 
 const Home: NextPage = () => {
   const hello = api.example.hello.useQuery({ text: "from tRPC" });
