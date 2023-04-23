@@ -5,19 +5,9 @@
 await import("./src/env.mjs");
 
 /** @type {import("next").NextConfig} */
-const nextConfig = {
+const Config = {
   reactStrictMode: true,
 
-  webpack(nextConfig) {
-    nextConfig.experiments = {
-      layers: true,
-      asyncWebAssembly: true,
-
-      
-    };
-
-    return nextConfig;
-  },
 
   /**
    * If you have `experimental: { appDir: true }` set, then you must comment the below `i18n` config
@@ -30,4 +20,4 @@ const nextConfig = {
     defaultLocale: "en",
   },*/
 };
-export default nextConfig;
+export default Config;
